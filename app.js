@@ -81,6 +81,6 @@
 // tableRowMaker(stuffForFirstRow);
 // tableRowMaker(stuffForSecondRow);
 
-// makeStands();
+// makeStands(); fig
 // makeHeaderRow();
 // tableRowMaker(hours);

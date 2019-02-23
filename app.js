@@ -91,4 +91,29 @@ function createFormStore() {
   createNewStore.render();
 }
 
+function makeTotalsRow() {
+  var cookiestands = document.getElementById('cookiestands');
+  var trEl = document.createElement('tr');
+  cookiestands.appendChild(trEl);
+  var tdEl = document.createElement('td');
+  cookiestands.appendChild(tdEl);
+  tdEl.textContent = 'Totals';
+  var netTotals = 0;
+  for (var i = 0; i < hours.length; i++) {
+    var totalCookiesByHour = 0;
+    for (var j = 0; j < locationStores.length; j++) {
+      totalCookiesByHour += locationStores[j].cookiesSoldByHour[i];
+      netTotals += locationStores[j].cookiesSoldByHour[i];
+    }
+    tdEl = document.createElement('td');
+    cookiestands.appendChild(tdEl);
+    tdEl.textContent = totalCookiesByHour;
+  }
+  tdEl = document.createElement('td');
+  cookiestands.appendChild(tdEl);
+  tdEl.textContent = netTotals;
+}
+
+
 createFormStore();
+makeTotalsRow();

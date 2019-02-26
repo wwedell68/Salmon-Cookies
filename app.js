@@ -85,3 +85,10 @@ new NewStore('Captiol Hill', 20, 38, 2.3);
 new NewStore('Alki', 2, 16, 4.6);
 
 makeTotalsRow();
+
+
+document.getElementById('store-form').addEventListener('click', function(e){
+  var info = document.getElementById('storename').value;
+  e.preventDefault();
+  console.log(info);
+});

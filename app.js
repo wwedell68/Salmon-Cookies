@@ -52,7 +52,9 @@ function NewStore(storeName, minCustomers, maxCustomersParameter, averageCookies
 }
 
 function makeTotalsRow() {
+
   var trEl = document.createElement('tr');
+
   var tdEl = document.createElement('td');
 
   tdEl.textContent = 'Totals';
